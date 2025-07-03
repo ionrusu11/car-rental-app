@@ -1,0 +1,47 @@
+{
+	"name": "car-rental-app",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"start": "node .output/server/index.mjs",
+		"deploy": "npm run generate && npm run deploy:firebase",
+		"deploy:firebase": "firebase deploy",
+		"migrate:owner": "node scripts/migrate-car-owner-field.js"
+	},
+	"keywords": [
+		"car-rental",
+		"nuxt3",
+		"tailwindcss",
+		"firebase",
+		"vue3"
+	],
+	"author": "",
+	"license": "MIT",
+	"description": "Modern car rental web application built with Nuxt 3, Nuxt UI, Tailwind CSS, and Firebase",
+	"dependencies": {
+		"@nuxtjs/tailwindcss": "^6.14.0",
+		"@pinia/nuxt": "^0.11.1",
+		"@supabase/supabase-js": "^2.50.0",
+		"@vueuse/core": "^13.5.0",
+		"@vueuse/nuxt": "^13.5.0",
+		"autoprefixer": "^10.4.21",
+		"firebase": "^11.9.0",
+		"firebase-admin": "^13.4.0",
+		"minio": "^8.0.5",
+		"nuxt": "^3.17.5",
+		"pinia": "^3.0.3",
+		"postcss": "^8.5.4",
+		"postcss-import": "^16.1.0",
+		"tailwindcss": "^3.4.17"
+	},
+	"devDependencies": {
+		"@iconify-json/heroicons": "^1.2.2",
+		"@iconify-json/simple-icons": "^1.2.37",
+		"@nuxt/icon": "^1.15.0"
+	}
+}
